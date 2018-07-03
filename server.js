@@ -1,8 +1,8 @@
-var express = require('express');
-var bodyParser = require('body-parser');
-var app = express();
+const express = require('express');
+const bodyParser = require('body-parser');
+const app = express();
 
-var port = 3000;
+const port = 3000;
 
 app.listen(port, function() {
   console.log("App is running on port: ", port);
@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // db
-var products = require('./products');
+const products = require('./products');
 
 // index route
 app.get('/products', function(req, res) {
